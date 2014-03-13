@@ -60,11 +60,7 @@ public class Message {
 		 while(itr.hasNext()){
 			 //modification........
 			 //queryhit=queryhit+":"+SimpleDhtProvider.KeyValues.get(itr.next());
-			 
-			 
-			 
-			
-			// added : start
+			 // added : start
 			 String file_name= SimpleDhtProvider.KeyValues.get(itr.next());
 			 byte[] contents= null;
 			 String value=null;
@@ -86,19 +82,10 @@ public class Message {
 			 
 			 value= new String(contents);
 			 queryhit=queryhit+":"+file_name+"*"+value;
-			 
-			 
 			 // added : end
-			 
-			 
-			 
-			 
-			 
-			 
 		 }
 		}
 		//send only the hit value...........
-		
 		else {
 		 
 			System.out.println("case when it is single query...");
@@ -111,13 +98,8 @@ public class Message {
 				System.out.println("dude error in queryhit_creator for one key");
 			}
 			
-			
 			//modification........
 			//queryhit= queryhit+":"+SimpleDhtProvider.KeyValues.get(k);
-			
-			
-			
-			
 			// added : start 
 						//String file_name= SimpleDhtProvider.KeyValues.get(k);
 						String file_name=query_string;
@@ -144,19 +126,14 @@ public class Message {
 							//e.printStackTrace();
 							System.out.println("dude error in byte reading operation : queryhit method , message class");
 						}
-						
-			// added : end
-			
-						
-						
+			// added : end	
 		}
 		System.out.println("query hit is : "+ queryhit);
 		return queryhit;
 	
 	}
 	
-	
-	
+
 	public String movekeys_create() {
 		System.out.println("movekeys create invoked........");
 		
